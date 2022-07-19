@@ -7,10 +7,10 @@ RUN yum update -y
 RUN yum install -y httpd \
  zip \
  unzip
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page270/veggie.zip /var/www/html/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page280/dbi.zip /var/www/html/
 WORKDIR /var/www/html/
-RUN unzip veggie.zip
-RUN cp -rvf veggie-master/* .
-RUN rm -rf veggie-master veggie.zip
+RUN unzip dbi.zip
+RUN cp -rvf html/* .
+RUN rm -rf html dbi.zip
 CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 EXPOSE 80
